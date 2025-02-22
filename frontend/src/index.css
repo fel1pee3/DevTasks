@@ -1,0 +1,36 @@
+:root{
+    --color01: #1848D9;
+    --color02: #4B75F2;
+    --color03: #B6C5F2;
+    --color04: #456EBF;
+    --color05: #435373;
+    --black01: #111111;
+    --black02: #1f1f1f;
+    --black03: #2b2b2b;
+    --white01: #eeeeee;
+    --white02: #e7e7e7;
+
+    --font01: "Signika", serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: all ease .4s;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+}
+
+input, button{
+    outline: none;
+    border: none;
+}
+
+a{
+    text-decoration: none;
+}

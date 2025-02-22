@@ -3,6 +3,10 @@ import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import { RxEyeOpen } from "react-icons/rx";
 import { LuEyeClosed } from "react-icons/lu";
+import { MdOutlineAlternateEmail } from "react-icons/md";
+import { RiLockPasswordLine } from "react-icons/ri";
+import { FaRegUserCircle } from "react-icons/fa";
+import LogoDT from '../../Components/LogoDT/Logo';
 import style from "./Register.module.css"
 
 const Register = () => {
@@ -39,30 +43,38 @@ const Register = () => {
 
     return (
         <div className={style.register}>
+            <LogoDT />
             <div className={style.registerContainer}>
                 <form onSubmit={handleSubmit} className={style.registerForm}>
-                    <div className={style.caixaInput}>
+                    <div className={style.boxInputRegister}>
                         <label className={style.label}>Email</label>
-                        <input required className={style.registerInput} type="email" placeholder='email@gmail.com' name='email' autoComplete="username" onChange={handleChanges}/>
+                        <div className={style.boxInputEmail}>
+                            <MdOutlineAlternateEmail className={style.iconInput}/>
+                            <input required className={style.registerInput} type="email" placeholder='email@gmail.com' name='email' autoComplete="username" onChange={handleChanges}/>
+                        </div>
                     </div>
-                    <div className={style.caixaInput}>
+                    <div className={style.boxInputRegister}>
                         <label className={style.label}>Senha</label>
-                        <div className={style.containerInput}>
+                        <div className={style.boxInputPassword}>
+                            <RiLockPasswordLine className={style.iconInput}/>
                             <input required className={style.registerInput} type={showPassword ? "text" : "password"} placeholder='Senha123@' name='password' autoComplete="new-password" onChange={handleChanges}/>
                             <button className={style.btnEye} type="button" onClick={togglePasswordVisibility}>
                                 {showPassword ? <RxEyeOpen /> : <LuEyeClosed /> }
                             </button>
                         </div>
                     </div>
-                    <div className={style.caixaInput}>
+                    <div className={style.boxInputRegister}>
                         <label className={style.label}>Nome de Usuário</label>
-                        <input required className={style.registerInput} type="text" placeholder='Felipe Maia' name='username' onChange={handleChanges}/>
+                        <div className={style.boxInputUser}>
+                            <FaRegUserCircle className={style.iconInput}/>
+                            <input required className={style.registerInput} type="text" placeholder='Felipe Maia' name='username' onChange={handleChanges}/>
+                        </div>
                     </div>
                     <button className={style.btnCad}>Cadastrar</button>
                 </form>
                 <div className={style.registerLogin}>
                     <p>Já tem conta?</p>
-                    <Link to='/Login' className={style.link}>Login</Link>
+                    <Link to='/Login' className={style.linkLogin}>Login</Link>
                 </div>
             </div>
         </div>

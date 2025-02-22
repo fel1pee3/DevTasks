@@ -1,0 +1,99 @@
+.register{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    color: var(--white01);
+    background-color: var(--black03);
+    box-shadow: 5px 5px 10px -2px rgba(0,0,0,0.6);
+    -webkit-box-shadow: 5px 5px 10px -2px rgba(0,0,0,0.6);
+    -moz-box-shadow: 5px 5px 10px -2px rgba(0,0,0,0.6);
+}
+
+.registerContainer{
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    border-radius: 30px;
+    gap: 25px;
+    background-color: var(--black02);
+}
+
+.registerForm{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.boxInputRegister{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.label{
+    font-weight: bold;
+}
+
+.boxInputEmail, .boxInputPassword, .boxInputUser{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.iconInput{
+    position: absolute;
+    color: var(--white01);
+    left: 7px;
+    font-size: 1.2em;
+}
+
+.btnEye{
+    position: absolute;
+    right: 10px;
+    background-color: transparent;
+    color: var(--white01);
+    font-size: 1.2em;
+}
+
+.registerInput{
+    width: 100%;
+    padding: 15px 35px;
+    background-color: var(--black03);
+    color: var(--white02);
+    border-radius: 10px;
+    border: 1px solid var(--black03);
+}
+
+.registerInput:focus{
+    border-color: var(--color01);
+}
+
+.btnCad{
+    background-color: var(--color01);
+    padding: 15px;
+    border-radius: 10px;
+    color: var(--white01);
+}
+
+.btnCad:hover{
+    background-color: var(--color02);
+}
+
+.registerLogin{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.linkLogin{
+    color: var(--color01);
+    font-weight: bold;
+}
+
+.linkLogin:hover{
+    color: var(--color02);
+}

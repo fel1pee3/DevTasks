@@ -1,0 +1,17 @@
+.logoBox{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.logo{
+    width: 80px;
+}
+
+.nomeLogo{
+    font-family: var(--font01);
+    font-size: 1.6em;
+}
