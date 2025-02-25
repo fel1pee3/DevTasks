@@ -62,7 +62,7 @@ const Login = () => {
                             </button>
                         </div>
                     </div>
-                    <button className={style.btnCad}>Login</button>
+                    <button type="submit" className={style.btnCad}>Login</button>
                 </form>
                 <div className={style.loginRegister}>
                     <p>Não tem conta?</p>

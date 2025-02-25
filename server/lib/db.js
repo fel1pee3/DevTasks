@@ -1,15 +1,22 @@
-import mysql from 'mysql2/promise'
+import pkg from 'pg';
+const { Pool } = pkg;
 
 let connection;
 
-export const connectToDatabase = async () => {
-  if(!connection) {
-    connection = await mysql.createConnection({
-      host: process.env.DB_HOST,
-      user: process.env.DB_USER,
-      password: process.env.DB_PASSWORD,
-      database: process.env.DB_DATABASE 
-    })
+export async function connectToDatabase() {
+  if (global.connection) {
+    return global.connection.connect();
   }
-  return connection
+
+  const pool = new Pool({
+    connectionString: process.env.CONNECT_STRING,
+  });
+
+  const client = await pool.connect();
+  console.log('Connected to database');
+
+  client.release();
+
+  global.connection = pool;
+  return pool.connect();
 }
