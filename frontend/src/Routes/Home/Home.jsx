@@ -1,30 +1,32 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import style from "./home.module.css"
+import axios from 'axios';
+import LogoDT from '../../Components/LogoDT/Logo';
+import style from "./Home.module.css";
 
 const Home = () => {
-    
-    const [userName, setUserName] = useState('');
+    const [user, setUser] = useState(null);
     const navigate = useNavigate();
 
     const fetchUser = async () => {
         try {
-        const token = localStorage.getItem('token');
-        const response = await axios.get('http://localhost:3000/auth/home', {
-            headers: {
-            "Authorization": `Bearer ${token}`
-            }
-        });
+            const token = localStorage.getItem('token');
+            if (!token) return navigate('/login');
 
-        if (response.status === 201) {
-                setUserName(response.data.users.username); 
+            const response = await axios.get('http://localhost:3000/auth/home', {
+                headers: { "Authorization": `Bearer ${token}` }
+            });
+
+            console.log("Resposta da API:", response.data);
+
+            if (response.status === 200) {
+                setUser(response.data.user);
             } else {
                 navigate('/login');
             }
         } catch (err) {
-        navigate('/login');
-        console.log(err);
+            console.error("Erro ao buscar usuário:", err);
+            navigate('/login');
         }
     };
 
@@ -33,8 +35,14 @@ const Home = () => {
     }, []);
 
     return (
-        <div>Home</div>
-    )
-}
+        <div className={style.home}>
+            <div className={style.homeContainer}>
+                <h1 className={style.welcomeMessage}>
+                    Bem-vindo {user ? user.username : "!"}
+                </h1>
+            </div>
+        </div>
+    );
+};
 
-export default Home
+export default Home;
