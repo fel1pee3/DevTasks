@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import LogoDT from '../../Components/LogoDT/Logo';
 import style from "./Home.module.css";
+import HeaderHome from '../../Components/HeaderHome/HeaderHome';
 
 const Home = () => {
     const [user, setUser] = useState(null);
@@ -16,8 +16,6 @@ const Home = () => {
             const response = await axios.get('http://localhost:3000/auth/home', {
                 headers: { "Authorization": `Bearer ${token}` }
             });
-
-            console.log("Resposta da API:", response.data);
 
             if (response.status === 200) {
                 setUser(response.data.user);
@@ -36,11 +34,10 @@ const Home = () => {
 
     return (
         <div className={style.home}>
-            <div className={style.homeContainer}>
-                <h1 className={style.welcomeMessage}>
-                    Bem-vindo {user ? user.username : "!"}
-                </h1>
-            </div>
+            <HeaderHome/>
+            <h1>Bem Vindo de Volta, 
+                <span>{user ? user.username : 'Carregando...'}</span>
+            .</h1>
         </div>
     );
 };

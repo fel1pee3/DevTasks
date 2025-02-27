@@ -1,0 +1,147 @@
+.headerHome{
+    width: 100%;
+    height: 100px;
+    background-color: var(--white03);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10%;
+    -webkit-box-shadow: 0px 5px 10px 1px rgba(0,0,0,0.05);
+    -moz-box-shadow: 0px 5px 10px 1px rgba(0,0,0,0.05);
+    box-shadow: 0px 5px 10px 1px rgba(0,0,0,0.05);
+}
+
+.boxLogo{
+    width: max-content;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.imgLogoIcon{
+    width: 45px;
+    height: 45px;
+}
+
+.imgLogoName{
+    font-family: var(--font01);
+    font-weight: 500;
+    font-size: 1.4em;
+}
+
+.btnLinkHome{
+    background-color: var(--color01);
+    color: var(--white03);
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+.btnLinkHome:hover{
+    background-color: var(--color02);
+}
+
+.traco{
+    width: 1.5px;
+    border-radius: 1px;
+    height: 30px;
+    background-color: #ccc;
+}
+
+.boxBtnsFuncs{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.boxBtnsFuncs:hover .iconUser, .boxBtnsFuncs:hover .nameUser{   
+    color: var(--color01);
+}
+
+.boxSelect{
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.btnSelect{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: transparent;
+}
+
+.iconUser{
+    font-size: 1.8em;
+    color: var(--black04);
+}
+
+.nameUser{
+    font-weight: 600;
+    color: var(--black03);
+}
+
+.boxItensSelect{
+    position: absolute;
+    top: 40px;
+    right: 5px;
+    background-color: var(--white03);
+    padding: 30px;
+    border-radius: 5px;
+    -webkit-box-shadow: 2px 2px 10px 0px rgba(0,0,0,0.3);
+    -moz-box-shadow: 2px 2px 10px 0px rgba(0,0,0,0.3);
+    box-shadow: 2px 2px 10px 0px rgba(0,0,0,0.3);
+}
+
+.gmailSelect{
+    color: var(--black01);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 0;
+    cursor: pointer;
+}
+
+.boxBtnsItensSelect{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: start;
+    margin-top: 15px;
+}
+
+.btnBoxSelect{
+    width: 100%;
+    text-align: start;
+    font-size: 1em;
+    font-weight: 500;
+    background-color: transparent;
+}
+
+.btnBoxSelect:hover{
+    color: var(--color01);
+}
+
+@media (max-width: 768px){
+    .headerHome{
+        padding: 0 5%;
+    }
+    .boxBtnsFuncs{
+        gap: 10px;
+    }
+
+    .btnLinkHome{
+        font-size: .8;
+        padding: 10px 20px;
+        border-radius: 20px;
+    }
+
+    .nameUser{
+        display: none;
+    }
+
+    .traco{
+        display: none;
+    }
+}
