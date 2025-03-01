@@ -2,4 +2,113 @@
     width: 100vw;
     height: 100vh;
     background-color: var(--color03);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.containerHome{
+    width: 100%;
+    margin: 0 10%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.titleWelcome{
+    font-family: var(--font02);
+    font-size: 3em;
+} 
+
+.nameWelcome{
+    font-family: var(--font02);
+}
+
+.textMsg{
+    font-size: 1.2em;
+}
+
+.nomeApp{
+    font-weight: 600;
+    color: var(--color01);
+}
+
+.boxUserHome{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: 20px;
+    border: 1px solid var(--black01);
+    background-color: var(--white03);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.boxImg{
+    width: 70px;
+    height: 70px;
+    background-color: var(--color01);
+    color: var(--white03);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.boxInfo{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.boxMin{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.emailUser{
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.iconUser{
+    font-size: 1.5em;
+    color: var(--black01);
+}
+
+.btnLinkHome{
+    background-color: var(--color01);
+    color: var(--white03);
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+.btnLinkHome:hover{
+    background-color: var(--color02);
+}
+
+@media (max-width: 768px){
+    .containerHome{
+        margin: 0 2%;
+    }
+    .titleWelcome{
+        font-family: var(--font02);
+        font-size: 2em;
+    } 
+    .textMsg{
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 450px){
+    .containerHome{
+        margin: 0 2%;
+    }
+    .titleWelcome{
+        font-family: var(--font02);
+        font-size: 1.5em;
+    } 
 }

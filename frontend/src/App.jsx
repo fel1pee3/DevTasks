@@ -4,6 +4,7 @@ import Home from './Routes/Home/Home'
 import Register from './Routes/Register/Register'
 import Login from './Routes/Login/Login'
 import HomeScreen from './Routes/HomeScreen/HomeScreen'
+import Perfil from './Routes/Perfil/Perfil'
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
         <Route path='/register' element={<Register />}></Route>
         <Route path='/login' element={<Login />}></Route>
         <Route path='/homeScreen' element={<HomeScreen />}></Route>
+        <Route path='/perfil' element={<Perfil />}></Route>
       </Routes>
     </BrowserRouter>
   )

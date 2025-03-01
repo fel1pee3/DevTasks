@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import axios from 'axios';
 import style from "./Home.module.css";
+import { FaUserCircle } from "react-icons/fa";
 import HeaderHome from '../../Components/HeaderHome/HeaderHome';
 
 const Home = () => {
@@ -35,9 +36,24 @@ const Home = () => {
     return (
         <div className={style.home}>
             <HeaderHome/>
-            <h1>Bem Vindo de Volta, 
-                <span>{user ? user.username : 'Carregando...'}</span>
-            .</h1>
+            <div className={style.containerHome}>
+                <h1 className={style.titleWelcome}>Bem Vindo de Volta, 
+                    <span className={style.nameWelcome}> {user ? user.username :  'Carregando...'}</span>
+                .</h1>
+                <p className={style.textMsg}>
+                    Continue de onde você parou em <span className={style.nomeApp}>DevTasks</span>
+                </p>
+                <div className={style.boxUserHome}>
+                    <div className={style.boxImg}>FM</div>
+                    <div className={style.boxInfo}>
+                        <div className={style.boxMin}>
+                            <span className={style.emailUser}>{user ? user.email : 'Carregando...'}</span>
+                            <FaUserCircle className={style.iconUser}/>
+                        </div>
+                        <Link className={style.btnLinkHome} to='/HomeScreen'>Ir para o DevTasks</Link>
+                    </div>
+                </div>
+            </div>
         </div>
     );
 };

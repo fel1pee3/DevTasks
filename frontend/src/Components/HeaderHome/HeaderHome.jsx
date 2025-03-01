@@ -53,7 +53,7 @@ const HeaderHome = () => {
                                 {user ? user.email : 'Carregando...'}
                             </h4>
                             <div className={style.boxBtnsItensSelect}>
-                                <button className={style.btnBoxSelect}>Botão 1</button>
+                                <Link to='/perfil' className={style.btnBoxSelect}>Perfil</Link>
                                 <button className={style.btnBoxSelect}>Botão 2</button>
                                 <button className={style.btnBoxSelect}>Botão 3</button>
                             </div>
