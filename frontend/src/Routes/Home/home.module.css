@@ -1,11 +1,12 @@
 .home{
     width: 100vw;
     height: 100vh;
-    background-color: var(--color03);
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
+    background-image: url('../../../images/background01-home.png');
+    background-size: cover;
 }
 
 .containerHome{
