@@ -6,6 +6,7 @@ import 'react-confirm-alert/src/react-confirm-alert.css';
 import Logo from '../../../images/logo-semfundo.png';
 import { FaUserCircle } from "react-icons/fa";
 import style from "./HeaderHome.module.css";
+import "./HeaderConfirmAlert.css";
 
 const HeaderHome = () => {
     const [user, setUser] = useState(null);
@@ -38,8 +39,8 @@ const HeaderHome = () => {
     }, []);
 
     const handleConfirmLogout = () => {
-        localStorage.removeItem('token'); // Remove o token
-        navigate('/login'); // Redireciona para login
+        localStorage.removeItem('token');
+        navigate('/login');
     };
 
     const handleLogout = () => {
