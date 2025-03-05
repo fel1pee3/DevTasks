@@ -1,0 +1,14 @@
+.boxSelect{
+    position: relative;
+}
+
+.boxItensSelect{
+    position: absolute;
+    top: 35px;
+    left: 0;
+    margin-Top: 10px;
+    background: #f0f0f0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}

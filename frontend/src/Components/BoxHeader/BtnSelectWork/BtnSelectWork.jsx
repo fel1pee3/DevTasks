@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import style from "./BtnSelect01.module.css";
+import style from "./BtnSelectWork.module.css";
 
-const BtnSelect01 = () => {
+const BtnSelectWork = () => {
 
     const [isVisible, setIsVisible] = useState(false);
     
@@ -12,7 +12,7 @@ const BtnSelect01 = () => {
     return (
         <div className={style.boxSelect}>
             <button className={style.btnSelect} onClick={toggleVisibility}>
-                Clique para mostrar os botões
+                Seu Trabalho
             </button>
 
             {isVisible && (
@@ -26,4 +26,4 @@ const BtnSelect01 = () => {
     )
 }
 
-export default BtnSelect01
+export default BtnSelectWork

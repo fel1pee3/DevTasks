@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Logo from '../../../images/logo-semfundo.png'
 import style from "./Header.module.css";
-import BoxBtnsSelect from '../BoxBtnsSelect/BoxBtnsSelect';
+import BoxBtnsSelect from '../BoxHeader/BoxBtnsSelect/BoxBtnsSelect';
 
 const Header = () => {
 
