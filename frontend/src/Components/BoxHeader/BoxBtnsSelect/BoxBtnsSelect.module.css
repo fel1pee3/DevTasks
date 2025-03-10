@@ -1,4 +1,17 @@
 .boxBtnsSelect{
     display: flex;
-    gap: 10px;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.boxBtns{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.boxOthersBtns{
+    display: flex;
+    gap: 30px;
+    align-items: center;
 }

@@ -1,0 +1,23 @@
+.boxSearch{
+    position: relative;
+}
+
+.iconSearch{
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: var(--black01);
+}
+
+.inputSearch{
+    border: 1px solid var(--black01);
+    padding: 10px 15px 10px 30px;
+    border-radius: 10px;
+    width: 200px; /* Largura inicial */
+    transition: width 0.3s ease-in-out;
+}
+
+.inputSearch:focus{
+    width: 600px;
+}

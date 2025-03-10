@@ -2,11 +2,26 @@
     position: relative; 
 }
 
+.btnCreateTask{
+    background-color: var(--color01);
+    padding: 10px 20px;
+    color: var(--white01);
+    border-radius: 10px;
+}
+
+.btnCreateTask:hover{
+    background-color: var(--color02);
+}
+
+.btnCreateTask:active{
+    transform: scale(0.9);
+}
+
 .boxCreateTask {
-    position: fixed; /* Fixa o formulário no meio da tela */
+    position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); /* Centraliza */
+    transform: translate(-50%, -50%);
     width: 400px;
     padding: 20px;
     background: white;

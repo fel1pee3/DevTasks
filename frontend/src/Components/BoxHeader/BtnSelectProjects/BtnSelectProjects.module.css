@@ -2,11 +2,45 @@
     position: relative;
 }
 
+/* From Uiverse.io by joe-herbert */ 
+.btnSelect {
+    background: none;
+    font-weight: bold;
+    font-size: 1em;
+    position: relative;
+    color: var(--black01);
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.btnSelect:active {
+    transform: scale(0.9);
+}
+
+.btnSelect::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    top: 46px;
+    left: 0;
+    background-color: var(--black01);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.btnSelect:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}  
+
 .boxItensSelect{
     position: absolute;
-    top: 35px;
+    top: 38px;
     left: 0;
-    margin-Top: 10px;
+    margin-Top: 15px;
     background: #f0f0f0;
     padding: 10px;
     border: 1px solid #ccc;

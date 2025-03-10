@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { IoIosArrowDown } from "react-icons/io";
 import style from "./BtnSelectWork.module.css";
 
 const BtnSelectWork = () => {
@@ -12,7 +13,7 @@ const BtnSelectWork = () => {
     return (
         <div className={style.boxSelect}>
             <button className={style.btnSelect} onClick={toggleVisibility}>
-                Seu Trabalho
+                Seu Trabalho <IoIosArrowDown className={style.iconArrowD}/>
             </button>
 
             {isVisible && (

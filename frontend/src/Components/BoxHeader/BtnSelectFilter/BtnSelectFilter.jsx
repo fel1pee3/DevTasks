@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { IoIosArrowDown } from "react-icons/io";
 import style from "./BtnSelectFilter.module.css";
 
 const BtnSelectFilter = () => {
@@ -12,7 +13,7 @@ const BtnSelectFilter = () => {
     return (
         <div className={style.boxSelect}>
             <button className={style.btnSelect} onClick={toggleVisibility}>
-                Filtros
+                Filtros <IoIosArrowDown className={style.iconArrowD}/>
             </button>
 
             {isVisible && (

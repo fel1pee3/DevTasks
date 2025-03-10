@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { IoIosArrowDown } from "react-icons/io";
 import style from "./BtnSelectProjects.module.css";
 
 const BtnSelect02 = () => {
@@ -12,7 +13,7 @@ const BtnSelect02 = () => {
     return (
         <div className={style.boxSelect}>
             <button className={style.btnSelect} onClick={toggleVisibility}>
-                Projetos
+                Projetos <IoIosArrowDown className={style.iconArrowD}/>
             </button>
 
             {isVisible && (
