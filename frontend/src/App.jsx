@@ -5,6 +5,7 @@ import Register from './Routes/Register/Register'
 import Login from './Routes/Login/Login'
 import HomeScreen from './Routes/HomeScreen/HomeScreen'
 import Perfil from './Routes/Perfil/Perfil'
+import CreateProject from './Routes/CreateProject/CreateProject'
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
         <Route path='/login' element={<Login />}></Route>
         <Route path='/homeScreen' element={<HomeScreen />}></Route>
         <Route path='/perfil' element={<Perfil />}></Route>
+        <Route path='/createProject' element={<CreateProject />}></Route>
       </Routes>
     </BrowserRouter>
   )

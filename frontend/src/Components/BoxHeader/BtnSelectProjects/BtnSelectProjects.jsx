@@ -31,8 +31,8 @@ const BtnSelect02 = () => {
                         </Link>
                     </div>
                     <div className={style.outhesLinks}>
-                        <Link className={style.linkOuthes} to="/">Vizualizar todos os projetos</Link>
-                        <Link className={style.linkOuthes} to="/">Criar Projeto</Link>
+                        <Link to="/" className={style.linkOuthes}>Vizualizar todos os projetos</Link>
+                        <Link to="/CreateProject" className={style.linkOuthes}>Criar Projeto</Link>
                     </div>
                 </div>
             )}
