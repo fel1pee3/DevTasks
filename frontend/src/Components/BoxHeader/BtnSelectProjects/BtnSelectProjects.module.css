@@ -37,12 +37,62 @@
 }  
 
 .boxItensSelect{
+    width: max-content;
     position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
     top: 38px;
     left: 0;
     margin-Top: 15px;
-    background: #f0f0f0;
-    padding: 10px;
+    background: var(--white04);
     border: 1px solid #ccc;
     border-radius: 5px;
+    -webkit-box-shadow: 5px 5px 20px 0px rgba(0,0,0,0.2);
+    -moz-box-shadow: 5px 5px 20px 0px rgba(0,0,0,0.2);
+    box-shadow: 5px 5px 20px 0px rgba(0,0,0,0.2);
+}
+
+.boxProjectsRecent{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--black04);
+}
+
+.nameRecent{
+    padding: 0 20px 10px 20px;
+    margin-top: 10px;
+}
+
+.projectRecent{
+    padding: 10px 20px;
+}
+
+.projectRecent:hover{
+    background-color: var(--white01);
+}
+
+.nameProject{
+    font-weight: 400;
+    font-size: .9em;
+}
+
+.typeProject{
+    font-size: .8em;
+}
+
+.outhesLinks{
+    font-size: .9em;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5px;
+}
+
+.linkOuthes{
+    padding: 10px 20px;
+}
+
+.linkOuthes:hover{
+    background-color: var(--white01);
 }

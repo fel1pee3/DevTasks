@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { IoIosArrowDown } from "react-icons/io";
+import { Link } from 'react-router-dom';
 import style from "./BtnSelectFilter.module.css";
 
 const BtnSelectFilter = () => {
@@ -12,17 +12,9 @@ const BtnSelectFilter = () => {
 
     return (
         <div className={style.boxSelect}>
-            <button className={style.btnSelect} onClick={toggleVisibility}>
-                Filtros <IoIosArrowDown className={style.iconArrowD}/>
-            </button>
-
-            {isVisible && (
-                <div className={style.boxItensSelect}>
-                    <button>Botão 1</button>
-                    <button>Botão 2</button>
-                    <button>Botão 3</button>
-                </div>
-            )}
+            <Link to="/" className={style.btnSelect} onClick={toggleVisibility}>
+                Filtros
+            </Link>
         </div>
     )
 }

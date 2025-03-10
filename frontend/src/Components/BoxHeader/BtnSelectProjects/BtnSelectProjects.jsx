@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom';
 import { IoIosArrowDown } from "react-icons/io";
 import style from "./BtnSelectProjects.module.css";
 
@@ -18,9 +19,21 @@ const BtnSelect02 = () => {
 
             {isVisible && (
                 <div className={style.boxItensSelect}>
-                    <button>Botão 1</button>
-                    <button>Botão 2</button>
-                    <button>Botão 3</button>
+                    <div className={style.boxProjectsRecent}>
+                        <h5 className={style.nameRecent}>Recentes</h5>
+                        <Link to="/" className={style.projectRecent}>
+                            <h3 className={style.nameProject}>Nome do Projeto <span className={style.nameKey}>(Chave)</span></h3>
+                            <p className={style.typeProject}>Tipo de Projeto</p>
+                        </Link>
+                        <Link to="/" className={style.projectRecent}>
+                            <h3 className={style.nameProject}>Nome do Projeto <span className={style.nameKey}>(Chave)</span></h3>
+                            <p className={style.typeProject}>Tipo de Projeto</p>
+                        </Link>
+                    </div>
+                    <div className={style.outhesLinks}>
+                        <Link className={style.linkOuthes} to="/">Vizualizar todos os projetos</Link>
+                        <Link className={style.linkOuthes} to="/">Criar Projeto</Link>
+                    </div>
                 </div>
             )}
         </div>

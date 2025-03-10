@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom';
 import { IoIosArrowDown } from "react-icons/io";
 import style from "./BtnSelectWork.module.css";
 
@@ -12,17 +13,9 @@ const BtnSelectWork = () => {
 
     return (
         <div className={style.boxSelect}>
-            <button className={style.btnSelect} onClick={toggleVisibility}>
-                Seu Trabalho <IoIosArrowDown className={style.iconArrowD}/>
-            </button>
-
-            {isVisible && (
-                <div className={style.boxItensSelect}>
-                    <button>Botão 1</button>
-                    <button>Botão 2</button>
-                    <button>Botão 3</button>
-                </div>
-            )}
+            <Link to='/' className={style.btnSelect} onClick={toggleVisibility}>
+                Seu Trabalho
+            </Link>
         </div>
     )
 }

@@ -9,11 +9,7 @@
     font-size: 1em;
     position: relative;
     color: var(--black01);
-    display: flex;
-    align-items: center;
-    gap: 3px;
 }
-
 
 .btnSelect:active {
     transform: scale(0.9);
@@ -42,8 +38,13 @@
     top: 38px;
     left: 0;
     margin-Top: 15px;
-    background: #f0f0f0;
+    background: var(--white04);
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    -webkit-box-shadow: 5px 5px 20px 0px rgba(0,0,0,0.2);
+    -moz-box-shadow: 5px 5px 20px 0px rgba(0,0,0,0.2);
+    box-shadow: 5px 5px 20px 0px rgba(0,0,0,0.2);
 }
+
+    
