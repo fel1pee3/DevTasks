@@ -67,7 +67,7 @@ const HeaderHome = () => {
                 <h4 className={style.imgLogoName}>DevTasks</h4>
             </div>
             <div className={style.boxBtnsFuncs}>
-                <Link className={style.btnLinkHome} to='/HomeScreen'>Ir para o DevTasks</Link>
+                <Link className={style.btnLinkHome} to='/ScreenYourWork'>Ir para o DevTasks</Link>
                 <div className={style.traco}></div>
                 <div className={style.boxSelect}>
                     <button className={style.btnSelect} onClick={toggleVisibility}>

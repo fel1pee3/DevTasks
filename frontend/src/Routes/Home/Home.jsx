@@ -50,7 +50,7 @@ const Home = () => {
                             <span className={style.emailUser}>{user ? user.email : 'Carregando...'}</span>
                             <FaUserCircle className={style.iconUser}/>
                         </div>
-                        <Link className={style.btnLinkHome} to='/HomeScreen'>Ir para o DevTasks</Link>
+                        <Link className={style.btnLinkHome} to='/ScreenYourWork'>Ir para o DevTasks</Link>
                     </div>
                 </div>
             </div>
